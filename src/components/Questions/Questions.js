@@ -93,7 +93,7 @@ const Questions = ({
                 </div>
               ))}
             {!answeredQuestion && countdown === 0 && (
-              <p>
+              <p className="questions__answer">
                 {randomMessages[2].gameOver}. Correct answer is{" "}
                 {question.answer}
               </p>
