@@ -5,7 +5,6 @@ const ScoreTitle = () => {
     <div className="score-title__container">
       <p className="score-title">RANK</p>
       <p className="score-title">NAME</p>
-      <p className="score-title">HOUSE</p>
       <p className="score-title">SCORE</p>
     </div>
   );
