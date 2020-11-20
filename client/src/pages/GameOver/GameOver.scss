@@ -1,0 +1,26 @@
+.game-over__title {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.game-over__points {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.game-over__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-over__high {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.game-over__button {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+}
