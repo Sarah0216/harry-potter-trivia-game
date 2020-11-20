@@ -2,7 +2,11 @@ import "./Header.scss";
 import logo from "../../assets/logo/logo.png";
 
 const Header = () => {
-  return <img src={logo} alt="logo" />;
+  return (
+    <header>
+      <img className="header-logo" src={logo} alt="logo" />
+    </header>
+  );
 };
 
 export default Header;

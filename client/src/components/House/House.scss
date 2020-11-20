@@ -1,0 +1,12 @@
+.house {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.house__img {
+  height: 200px;
+  width: 200px;
+  background-color: grey;
+}

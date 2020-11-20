@@ -1,0 +1,15 @@
+.sign-up {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+input,
+label {
+  display: block;
+}
+
+.sign-up__name {
+  height: 30px;
+  width: 140px;
+}
