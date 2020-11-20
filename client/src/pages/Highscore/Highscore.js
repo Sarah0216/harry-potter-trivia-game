@@ -13,17 +13,19 @@ const Highscore = () => {
     });
   }, [setLeaderBoard]);
   return (
-    <div>
+    <div className="highscore">
       <Header />
       <h1 className="highscore__title">HIGHSCORES</h1>
-      <ScoreTitle />
-      <ul className="highscore__container">
-        {leaderboard
-          .sort((a, b) => b.score - a.score)
-          .map((leader, index) => {
-            return <Score leader={leader} key={index} position={index} />;
-          })}
-      </ul>
+      <div className="highscore__board">
+        <ScoreTitle />
+        <ul className="highscore__container">
+          {leaderboard
+            .sort((a, b) => b.score - a.score)
+            .map((leader, index) => {
+              return <Score leader={leader} key={index} position={index} />;
+            })}
+        </ul>
+      </div>
     </div>
   );
 };

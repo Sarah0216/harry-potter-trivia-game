@@ -4,9 +4,7 @@ const GameOver = ({ score }) => {
   return (
     <div>
       <h1 className="game-over__title">GAME OVER</h1>
-      <p className="game-over__points">
-        You won your house {score} AMOUNT of points
-      </p>
+      <p className="game-over__points">You won your house {score} of points</p>
 
       <div className="game-over__container">
         <p className="game-over__high">Checkout the highscore board</p>

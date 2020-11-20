@@ -32,7 +32,7 @@ const randomMessages = [
 
 const Home = () => {
   const [name, setName] = useState("");
-  const [countdown, setCountdown] = useState(10); // change this back
+  const [countdown, setCountdown] = useState(5); // change this back
   const [showQuestions, setShowQuestions] = useState(false);
   const [loadQuestions, setLoadQuestions] = useState(false);
   const [score, setScore] = useState(0);
@@ -111,7 +111,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="header">
       <Header />
       {!showQuestions && <SignUp onSignupSubmit={onSignupSubmit} />}
       {showQuestions && (

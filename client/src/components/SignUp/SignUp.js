@@ -8,7 +8,9 @@ const SignUp = ({ onSignupSubmit }) => {
   return (
     <div className="sign-up">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="nameInput">ENTER NAME HERE </label>
+        <label className="sign-up__label" htmlFor="nameInput">
+          ENTER NAME HERE{" "}
+        </label>
         <input
           className="sign-up__name"
           type="text"

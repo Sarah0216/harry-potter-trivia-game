@@ -41,25 +41,28 @@ const Questions = ({
       {gameOver && <GameOver score={score} />}
       {!gameOver && (
         <div>
-          <p>
+          <p className="questions__time">
             {`Time remaining: 00:${countdown === 10 ? 10 : "0" + countdown}`}{" "}
           </p>
-          <p>{`${
+          <p className="questions__time">{`${
             questionsRemaining > 1
               ? questionsRemaining + " questions"
               : questionsRemaining + " question"
           } remaining`}</p>
-          <p>{`Your score: ${score}`} </p>
-          <p>your house is {house.name}</p>
-          <p>
-            your house is{" "}
+          <p className="questions__time">{`Your score: ${score}`} </p>
+          <p className="questions__sorted">
+            You've been sorted into {house.name}
+          </p>
+          <p className="questions__sorted">
             <img
+              className="questions__house"
               src={"http://localhost:7000/houses/" + house.img + ".jpg"}
               alt="house"
             />
           </p>
-          <p>your wand is {wand.name}</p>
+          <p className="questions__sorted">you got {wand.name}'s wand</p>
           <img
+            className="questions__wand"
             src={"http://localhost:7000/wands/" + wand.img + ".png"}
             alt="wand"
           />
@@ -95,14 +98,14 @@ const Questions = ({
               </p>
             )}
             {answeredCorrectly && (
-              <p>
+              <p className="questions__answer">
                 {randomMessages[0].correctAns}. Your answer was {answer} and it
                 was correct! You got {question.point} points!
               </p>
             )}
 
             {!answeredCorrectly && answeredQuestion && (
-              <p>
+              <p className="questions__answer">
                 {randomMessages[1].incorrectAns} Your answer was {answer} and
                 correct answer is {question.answer}. Sorry, but no points!
               </p>

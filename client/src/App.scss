@@ -1,4 +1,12 @@
+@use './partials/fonts' as *;
+
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "charm regular";
+}
+
+body,
+html {
+  cursor: url("./assets/images/draco-wand.png"), auto;
 }
