@@ -1,13 +1,13 @@
 import "./Score.scss";
 
-const Score = () => {
+const Score = ({ leader, position }) => {
   return (
     <div className="score__container">
       <li className="score__item">
-        <p className="score__rank">RANK</p>
-        <p className="score__name">NAME</p>
+        <p className="score__rank">{position + 1}</p>
+        <p className="score__name">{leader.name}</p>
         <p className="score__house">HOUSE</p>
-        <p className="score__score">SCORE</p>
+        <p className="score__score">{leader.score}</p>
       </li>
     </div>
   );

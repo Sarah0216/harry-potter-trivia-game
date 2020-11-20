@@ -1,16 +1,18 @@
 import "./GameOver.scss";
-import Header from "../../components/Header/Header";
-
-const GameOver = () => {
+import { Link } from "react-router-dom";
+const GameOver = ({ score }) => {
   return (
     <div>
-      <Header />
       <h1 className="game-over__title">GAME OVER</h1>
-      <p className="game-over__points">You won your house X AMOUNT of points</p>
+      <p className="game-over__points">
+        You won your house {score} AMOUNT of points
+      </p>
 
       <div className="game-over__container">
         <p className="game-over__high">Checkout the highscore board</p>
-        <button className="game-over__button">highscores</button>
+        <Link to="/highscore" className="game-over__button">
+          highscores
+        </Link>
       </div>
     </div>
   );

@@ -1,9 +1,6 @@
 import "./App.scss";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
-import Assigned from "./pages/Assigned/Assigned";
-import Questions from "./pages/Questions/Questions";
-import GameOver from "./pages/GameOver/GameOver";
+import Home from "./pages/Home/Home";
 import Highscore from "./pages/Highscore/Highscore";
 
 function App() {
@@ -11,9 +8,6 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/assigned" component={Assigned} />
-        <Route path="/questions" component={Questions} />
-        <Route path="/gameover" component={GameOver} />
         <Route path="/highscore" component={Highscore} />
       </Switch>
     </BrowserRouter>
