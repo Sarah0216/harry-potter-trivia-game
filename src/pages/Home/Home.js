@@ -103,9 +103,10 @@ const Home = () => {
       axios.post(API_URL + "/player", {
         name: name,
         score: score,
+        house: house,
       });
     }
-  }, [gameOver, name, score]);
+  }, [gameOver, name, score, house]);
   const onSignupSubmit = (e) => {
     e.preventDefault();
     setName(e.target.name.value);

@@ -9,7 +9,7 @@ const GameOver = ({ score }) => {
       <div className="game-over__container">
         <p className="game-over__high">Checkout the highscore board</p>
         <Link to="/highscore" className="game-over__button">
-          highscores
+          See Highscores
         </Link>
       </div>
     </div>
