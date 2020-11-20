@@ -1,0 +1,24 @@
+.question-lower__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.question-lower__top {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-lower__bottom {
+  display: flex;
+}
+
+.question-lower__question {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  padding-top: 50px;
+}
