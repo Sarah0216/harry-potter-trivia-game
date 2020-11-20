@@ -7,6 +7,7 @@ const Home = () => {
     <div>
       <Header />
       <SignUp />
+      <button className="home__button">ENTER</button>
     </div>
   );
 };
