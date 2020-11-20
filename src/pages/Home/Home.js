@@ -46,16 +46,18 @@ const Home = () => {
   const [wand, setWand] = useState({});
   const [house, setHouse] = useState({});
 
+  const API_URL = "https://harry-potter-api.herokuapp.com"; // change to localhost.
+
   // load questions initially, need to make this more secured
   useEffect(() => {
     loadQuestions &&
-      axios.get("http://localhost:7000/random").then((response) => {
+      axios.get(API_URL + "/random").then((response) => {
         setLoadQuestions(false);
         setQuestions(response.data.filter((_, index) => index !== 0));
         setCurrentQuestion(response.data[0]);
         setQuestionsLoaded(true);
 
-        axios.get("http://localhost:7000/random-hat").then((response) => {
+        axios.get(API_URL + "/random-hat").then((response) => {
           setHouse(response.data[0].house[0]);
           setWand(response.data[1].wand[0]);
         });
@@ -97,7 +99,7 @@ const Home = () => {
 
   useEffect(() => {
     if (gameOver) {
-      axios.post("http://localhost:7000/player", {
+      axios.post(API_URL + "/player", {
         name: name,
         score: score,
       });

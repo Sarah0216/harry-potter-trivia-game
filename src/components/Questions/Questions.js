@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import GameOver from "../GameOver/GameOver";
 import "./Questions.scss";
 
-const baseUrl = "http://localhost:7000";
+const baseUrl = "https://harry-potter-api.herokuapp.com";
 
 const Questions = ({
   question,
@@ -56,14 +56,14 @@ const Questions = ({
           <p className="questions__sorted">
             <img
               className="questions__house"
-              src={"http://localhost:7000/houses/" + house.img + ".jpg"}
+              src={baseUrl + "/houses/" + house.img + ".jpg"}
               alt="house"
             />
           </p>
           <p className="questions__sorted">you got {wand.name}'s wand</p>
           <img
             className="questions__wand"
-            src={"http://localhost:7000/wands/" + wand.img + ".png"}
+            src={baseUrl + "/wands/" + wand.img + ".png"}
             alt="wand"
           />
           <div className="questions-upper__container">
