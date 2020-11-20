@@ -6,6 +6,9 @@ import Questions from "../../components/Questions/Questions";
 import axios from "axios";
 import randomInt from "random-int";
 
+const API_URL = "https://harry-potter-api.herokuapp.com"; // change to localhost.
+// const API_URL = "http://localhost:7000";
+
 const randomMessages = [
   {
     correctAns: [
@@ -32,7 +35,7 @@ const randomMessages = [
 
 const Home = () => {
   const [name, setName] = useState("");
-  const [countdown, setCountdown] = useState(5); // change this back
+  const [countdown, setCountdown] = useState(10); // change this back
   const [showQuestions, setShowQuestions] = useState(false);
   const [loadQuestions, setLoadQuestions] = useState(false);
   const [score, setScore] = useState(0);
@@ -45,8 +48,6 @@ const Home = () => {
   const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
   const [wand, setWand] = useState({});
   const [house, setHouse] = useState({});
-
-  const API_URL = "https://harry-potter-api.herokuapp.com"; // change to localhost.
 
   // load questions initially, need to make this more secured
   useEffect(() => {

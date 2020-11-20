@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const API_URL = "https://harry-potter-api.herokuapp.com";
+// const API_URL = "http://localhost:7000";
 
 const Highscore = () => {
   const [leaderboard, setLeaderBoard] = useState([]);
